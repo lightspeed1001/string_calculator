@@ -43,3 +43,4 @@ catch (e)
 }
 
 console.log(calculator("1000000, 10, 10000, 2030, 23"));
+console.log(calculator("//a\n100a100,100\n100"));
