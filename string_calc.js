@@ -5,10 +5,24 @@ function Add(numbers)
 	numbers = numbers.replace(/\n/g, ",").split(",");
 	if(numbers.length == 1) return parseInt(numbers[0]);
 	sum = 0;
+	invalid = false;
+	invalid_numbers = [];
 	numbers.forEach(num => {
-		sum += parseInt(num);
+		if(num < 0)
+		{
+			invalid = true;
+			invalid_numbers.push(num);
+		}
+		else if(sum)
+			sum += parseInt(num);
 	});
-
-	return sum;	
+	if(invalid)
+	{
+		throw "Negatives not allowed: " + invalid_numbers.join(", ");
+	}
+	else
+	{
+		return sum;		
+	}
 }
 module.exports = Add;
