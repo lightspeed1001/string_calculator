@@ -1,0 +1,22 @@
+{
+  "name": "string_calculator",
+  "version": "1.0.0",
+  "description": "A simple string calculator assignment for school",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lightspeed1001/string_calculator.git"
+  },
+  "author": "Mikael Sigmundsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lightspeed1001/string_calculator/issues"
+  },
+  "homepage": "https://github.com/lightspeed1001/string_calculator#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
