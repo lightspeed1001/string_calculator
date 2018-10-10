@@ -41,3 +41,5 @@ catch (e)
 {
     console.log(e);
 }
+
+console.log(calculator("1000000, 10, 10000, 2030, 23"));

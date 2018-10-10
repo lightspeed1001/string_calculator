@@ -13,9 +13,10 @@ function Add(numbers)
 			invalid = true;
 			invalid_numbers.push(num);
 		}
-		else if(sum)
+		else if(num <= 1000)
 			sum += parseInt(num);
 	});
+
 	if(invalid)
 	{
 		throw "Negatives not allowed: " + invalid_numbers.join(", ");
