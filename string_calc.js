@@ -4,8 +4,8 @@ function Add(numbers)
     //empty string returns 0
     if(!numbers) return 0;
     
-    //convert the string into an array of numbers, split by ,
-    numbers = numbers.split(",");
+    //replace all newline characters with a , and then split by ,
+    numbers = numbers.replace(/\n/g, ",").split(",");
     //check if it's only one number
     if(numbers.length == 1) return parseInt(numbers[0]);
     //Add all of the numbers together
