@@ -8,7 +8,11 @@ function Add(numbers)
     numbers = numbers.split(",");
     //check if it's only one number
     if(numbers.length == 1) return parseInt(numbers[0]);
-    //else add the two numbers together
-    return parseInt(numbers[0]) + parseInt(numbers[1]);
+    //Add all of the numbers together
+    sum = 0;
+    numbers.forEach(num => {
+		sum += parseInt(num);
+	});
+    return sum;
 }
 module.exports = Add;
