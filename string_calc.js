@@ -14,6 +14,7 @@ function Add(numbers)
     is_valid = true;
     negatives = [];
     numbers.forEach(num => {
+        if(num > 1000) return; //big numbers not allowed
         if(num < 0)
         {
             //the number is negative. Function is now invalid
