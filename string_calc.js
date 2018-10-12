@@ -4,6 +4,17 @@ function Add(numbers)
     //empty string returns 0
     if(!numbers) return 0;
     
+    //check for custom deli
+    if(numbers.startsWith("//"))
+    {
+        numbers = numbers.slice(2);                 //get rid of the //
+        end_of_delim = numbers.indexOf("\n");       //grab the end of the delim
+        delim = numbers.substr(0,end_of_delim);     //grab the delim
+        numbers = numbers.slice(end_of_delim+  1);  //get rid of the delim and newline
+        regex = RegExp(delim, "g");                 //regex to find all the delims
+        numbers = numbers.replace(regex, ",");      //replace all of the new delims with an old one
+    }
+
     //replace all newline characters with a , and then split by ,
     numbers = numbers.replace(/\n/g, ",").split(",");
     //check if it's only one number
